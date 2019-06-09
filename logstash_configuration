@@ -1,0 +1,16 @@
+input {
+stdin {}
+kafka { topics => ["AWSKafkaTutorialTopic"]
+		bootstrap_servers => "b-2.kafkacluster.rc0kvh.c2.kafka.us-east-1.amazonaws.com:9092,b-3.kafkacluster.rc0kvh.c2.kafka.us-east-1.amazonaws.com:9092,b-1.kafkacluster.rc0kvh.c2.kafka.us-east-1.amazonaws.com:9092"
+		}
+}
+filter {
+
+}
+output {
+stdout {
+}
+kafka { topic_id => "AWSKafkaTutorialTopic" 
+		bootstrap_servers => "b-2.kafkacluster.rc0kvh.c2.kafka.us-east-1.amazonaws.com:9092,b-3.kafkacluster.rc0kvh.c2.kafka.us-east-1.amazonaws.com:9092,b-1.kafkacluster.rc0kvh.c2.kafka.us-east-1.amazonaws.com:9092"
+}
+}
